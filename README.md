@@ -34,29 +34,29 @@ perl vmodou.pl -b 01 -i -0008_0
 读取原始扫描图'books/01/src/-0008_0.jpg'（1512 x 2959）  
 生成测试图'books/01/tmp/-0008_0.jpg'！
 ```
-![image](https://github.com/shanleiguang/vModou/blob/main/images/001.png)
+![image](https://github.com/shanleiguang/vModou/blob/main/images/001.png)  
 生成初始測試圖，打默認輔助線，此時不掃描計算頂點，也不做任何變形。
 ```
 perl vmodou.pl -b 01 -i -0008_0 -t 0
 ```
-![image](https://github.com/shanleiguang/vModou/blob/main/images/002.png)
+![image](https://github.com/shanleiguang/vModou/blob/main/images/002.png)  
 根據默認輔助線確定的掃描區域，掃描四角頂點，每個角採用兩種掃描策略得到兩個可選頂點，程序自動選擇其中一個，此時也將根據默認變形參數執行變形，右側可預覽效果。
 
 ```
 perl vmodou.pl -b 01 -i -0008_0 -t 0 -mt 560 -m2 0.94
 ```
-![image](https://github.com/shanleiguang/vModou/blob/main/images/003.png)
+![image](https://github.com/shanleiguang/vModou/blob/main/images/003.png)  
 觀察發現，四角可選頂點還不精準，調整版框限制、剔除等參數，縮小掃描區域，減少掃描干擾區域，得到準確的可選頂點。
 
 ```
 perl vmodou.pl -b 01 -i -0008_0 -t 0 -mt 560 -m2 0.94 -pa 1 -pc 2
 ```
-![image](https://github.com/shanleiguang/vModou/blob/main/images/004.png)
+![image](https://github.com/shanleiguang/vModou/blob/main/images/004.png)  
 程序自動選擇A、C可選頂點不合適，手工指定為另一個，觀察右側變形效果已較理想，如個別頂點仍需微調，可繼續添加顶点坐标微调参数，如-da 10,0表示对变形后的A顶点X横向坐标+10像素。
 ```
 perl vmodou.pl -b 01 -i -0008_0 -t 0 -mt 560 -m2 0.94 -pa 1 -pc 2 -cl 40 -cr 10 -cb 20
 ```
-![image](https://github.com/shanleiguang/vModou/blob/main/images/005.png)
+![image](https://github.com/shanleiguang/vModou/blob/main/images/005.png)  
 觀察右側效果圖，裁切變形產生的黑邊。
 操作結束，此時最終效果圖將自動保存到‘dst/’目錄下
 
