@@ -62,7 +62,4 @@ perl vmodou.pl -b 01 -i -0008_0 -t 0 -mt 560 -m2 0.94 -pa 1 -pc 2 -cl 40 -cr 10 
 
 ## 赞助支持 Sponsorship
 ![image](https://github.com/shanleiguang/vRain/blob/main/sponsor_new.png)  
-- 本工具屬於Private開源項目，這裡只是預覽介紹。
-- 本工具目前已基本可用，考慮到應用場景的專業性和仍有很大提升空間，因此僅面向訂閱者開放。
-- 贊助後我將邀請您訪問該項目，一個月後續訂可通過Sponsor按鈕或該項目頁面提示。
 
